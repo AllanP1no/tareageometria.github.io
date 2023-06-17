@@ -1,183 +1,69 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html>
 <head>
-  <link rel="javas" href="">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">  <script>
-  jQuery(document).ready(function() {
-    function count($this){
-      var current = parseInt($this.html(), 10);
-      current = current + 1; /* Where 1 is increment */
-  
-      $this.html(++current);
-      if(current > $this.data('count')){
-        $this.html($this.data('count'));
+  <title>Parábolas - Página Principal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    p {
+      margin-bottom: 10px;
+    }
+  </style>
+  <script>
+    function playMusic() {
+      var audio = document.getElementById("audio");
+      if (audio.paused) {
+        audio.play();
       } else {
-        setTimeout(function(){count($this)}, 50);
+        audio.pause();
       }
     }
-  
-    jQuery(".stat-count").each(function() {
-      jQuery(this).data('count', parseInt(jQuery(this).html(), 10));
-      jQuery(this).html('0');
-      count(jQuery(this));
-    });
-  });</script>
-  <title>PARABOLA</title>
-  <link rel="stylesheet" href="estilos.css">
-  <meta charset="UTF-8">
+  </script>
 </head>
-<body class="bg-dark">
-
-  <nav class="navbar navbar-expand-lg bg-dark  navbar-dark sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="./imagenes/Imagen1.png" id="nav-logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#introduccion">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#tribute-data">Teoría</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#ejercicios">Conclusión</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index2.html">Ir a Ejercicios</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Música
-            </a>
-            <ul class="dropdown-menu">
-              <!-- Content -->
-              <div class="container d-flex justify-content-center my-4 mb-5">
-                <div id="mobile-box">
-                  <!-- Card -->
-                  <div class="card">
-                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                      <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/2108/2108423.png"
-                        alt="Card image cap">
-                      <a href="#!">
-                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                      </a>
-                    </div>
-                    <div class="card-body text-center">
-
-                      <h5 class="h5 font-weight-bold"><a href="#" target="_blank">Bones</a></h5>
-                      <p class="mb-0">Low Roar</p>
-
-                      <audio id="music" preload="true">
-                        <source src="relajante1.mp3">controls
-                      </audio>
-                      <div id="audioplayer">
-                        <i id="pButton" class="fas fa-play"></i>
-                        <div id="timeline">
-                          <div id="playhead"></div>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                  <!-- Card -->
-                </div>
-              </div>
-              <audio src="relajante1.mp3" controls></audio>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="stat">
-    <span class="stat-count">0</span>
-    <p class="stat-detail">Visitantes</p>
-</div>  
-
-  <main class="container mt-5">
-    <section class="container-fluid my-5 d-flex flex-column align-items-center" id="introduccion">
-      <h1 class="text-center my-5">LA PARABOLA</h1> 
-      <iframe width="560" height="315" src="https://www.youtube.com/watch?v=FlsYCYbmJGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <h2>Introducción.</h2>
-      
-      <p class="lead">Bienvenidos, La parábola es una de las curvas más conocidas y estudiadas en el ámbito de las matemáticas. 
-        Su forma característica y su amplia presencia en diversas áreas del conocimiento la convierten en un objeto de gran interés y utilidad.
-        Desde la antigua Grecia hasta nuestros días, las parábolas han desempeñado un papel fundamental en el desarrollo de teorías y aplicaciones 
-        prácticas en campos como la física, la ingeniería, la arquitectura y la economía, entre otros. En esta introducción, exploraremos los 
-        fundamentos de la parábola, sus propiedades y su importancia en el mundo real, así como su conexión con las ecuaciones cuadráticas. 
-        Descubriremos cómo esta curva ha cautivado la imaginación de científicos y matemáticos a lo largo de los siglos, y cómo sigue siendo una 
-        herramienta invaluable en el análisis y la modelización de fenómenos naturales y humanos. Prepárate para adentrarte en el fascinante mundo de 
-        las parábolas y descubrir su influencia en nuestra comprensión del universo que nos rodea.</p>
-    </section>
-    <section id="tribute-data">
-      <h1 class="title-APJ">
-        Sobre la Parabola.
-      </h1>
-      <h2>¿Qué es la Parabola?</h2>
-      <p>Una parábola es una curva en el plano que tiene una forma característica de apertura,
-        similar a la de un arco. Matemáticamente, se define como el conjunto de puntos equidistantes de un punto fijo llamado 
-        foco y una recta fija llamada directriz. La parábola es una de las curvas cónicas, junto con la elipse y la hipérbola.
-      </p>
-
-      <p> 
-        Las parábolas tienen propiedades geométricas interesantes. Por ejemplo, cualquier rayo que incida sobre una parábola desde 
-        el foco se reflejará de manera que el ángulo de incidencia sea igual al ángulo de reflexión con respecto a la tangente en 
-        ese punto de la parábola. Esta propiedad se utiliza en aplicaciones prácticas, como en los espejos parabólicos utilizados 
-        en los telescopios y en los reflectores de las antenas parabólicas.
-      </p>
-
-     <h2 class="title-APJ">Elementos básicos
-    </h2>
-      <img id ="centrar" src="imagenes/elementos-de-una-circunferencia.webp" class="img-fluid my-5" alt="Ilustración de las partes de una circunferencia">
-    <h3>
-      En la imagen expuesta arriba se pueden ver todos los elementos que vamos a nombrar a continuación:</h3>
-   <p>   <ul style="font-size:1.2em;">
-        <li> <b>Centro:</b> punto central que está a la misma distancia de todos los puntos pertenecientes a la circunferencia.</li>
-        <li> <b>Radio:</b> pedazo de recta que une el centro con cualquier punto perteneciente a la circunferencia.</li>
-        <li> <b>Cuerda:</b> pedazo de recta que une dos puntos cualquiera de una circunferencia.</li>
-        <li> <b>Diámetro:</b> mayor cuerda que une dos puntos de una circunferencia. Hay infinitos diámetros y todos pasan por el centro de la circunferencia.</li>
-        <li> <b>Recta secante:</b> recta que corta dos puntos cualesquiera de una circunferencia.</li>
-        <li> <b>Recta tangente:</b> recta que toca a la circunferencia en un solo punto y es perpendicular a un radio.</li>
-    </ul>
-  </p>
-      <br>
-      </div>
-
-      <iframe id="centrar" src="//www.slideshare.net/slideshow/embed_code/key/uRr1Gimltu01xs?startSlide=3" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/yezicp/la-circunferencia-62301303" title="La circunferencia" target="_blank">La circunferencia</a> </strong> de <strong><a href="//www.slideshare.net/yezicp" target="_blank">Yeselis Cantero</a></strong> </div>      <p>
-        Para más información, busque.  
-        <a id="tribute-link" href="https://en.wikipedia.org/wiki/Parabola"> 
-          <b>Parabolas</b>
-        </a>
-        en Wikipedia.
-      </p>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/JPhCBE4x0bE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </section>
-    <section id="tribute-data"><h2 class="text-center my-5">Conclusión</h2><p>
-      las parábolas son una forma poderosa y versátil de representar una variedad de fenómenos y conceptos en matemáticas y otras disciplinas. 
-      Su forma característica y su relación con las ecuaciones cuadráticas las convierten en una herramienta invaluable para modelar y analizar 
-      una amplia gama de situaciones del mundo real. Las parábolas tienen aplicaciones en física, ingeniería, economía y muchos otros campos, 
-      permitiéndonos comprender y predecir comportamientos, identificar puntos críticos y optimizar soluciones. Además, su belleza y elegancia 
-      matemática han fascinado a los estudiosos durante siglos, lo que demuestra la profunda conexión entre las matemáticas y la naturaleza. 
-      En resumen, las parábolas representan una de las formas más poderosas y fascinantes de expresión matemática, que continúa desempeñando un 
-      papel fundamental en nuestra comprensión del mundo que nos rodea.</p></section>
-  </main>
-  <footer class="container-fluid d-flex justify-content-center mt-5 bg-dark pt-3">
-    <p> Hecho por @ <a href="#"> Allan Pino. C.I 30.283.246. Geometría Analítica</a></p>
-   
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
+<body>
+  <h1>Las Parábolas</h1>
+  
+  <h2>Introducción</h2>
+  <p>Una parábola es una curva en el plano que tiene una forma característica de apertura, similar a la de un arco. Se define como el conjunto de puntos equidistantes de un punto fijo llamado foco y una recta fija llamada directriz.</p>
+  
+  <h2>Desarrollo</h2>
+  <h3>Características de las Parábolas</h3>
+  <ul>
+    <li>Simetría: Las parábolas son simétricas respecto a su eje vertical.</li>
+    <li>Vértice: Es el punto de la parábola más cercano al eje de simetría.</li>
+    <li>Foco: Es el punto fijo dentro de la parábola que define su forma.</li>
+    <li>Directriz: Es una línea recta fija que se encuentra a la misma distancia de todos los puntos de la parábola.</li>
+  </ul>
+  
+  <h3>Partes de una Parábola</h3>
+  <p>Las partes principales de una parábola son:</p>
+  <ul>
+    <li>Eje de simetría: Es la línea vertical que pasa por el vértice y divide a la parábola en dos partes iguales.</li>
+    <li>Recta focal: Es la línea que pasa por el foco y es perpendicular al eje de simetría.</li>
+    <li>Segmento focal: Es el segmento que conecta el vértice con el foco.</li>
+  </ul>
+  
+  <h2>Conclusión</h2>
+  <p>Las parábolas son curvas cónicas que poseen propiedades y características únicas. Su estudio es fundamental en diversas áreas de las matemáticas y tiene aplicaciones en la física, la ingeniería, la óptica y muchas otras disciplinas. Comprender las partes y características de las parábolas nos permite analizar y modelar fenómenos naturales y humanos con mayor precisión y eficiencia.</p>
+  
+  <audio id="audio" src="music.mp3" controls autoplay></audio>
+  
+  <button onclick="playMusic()">Reproducir/Pausar música</button>
+  
+  <p>Contador de visitas: <span id="counter">0</span></p>
+  
+  <script>
+    var counter = parseInt(localStorage.getItem("counter")) || 0;
+    counter++;
+    document.getElementById("counter").textContent = counter;
+    localStorage.setItem("counter", counter);
+  </script>
 </body>
-
 </html>
